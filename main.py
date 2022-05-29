@@ -238,4 +238,25 @@ def lookBehind():
                     ending = ["As you can see the old laughing man, when the game ended, you discover, that the treasure probably doesn't even exist", "Maybe there's a bigger probability finding some with a detector on the fields nearby.", "You're leaving the dusty room empty-handed.", "THE END."]
                     runs = False
     progress(1.4, ending)    
+    
+ 
+def main():
+  print("Hello adventurer!")
+  print("You're in a seamingly abandoned dungeon filled with unknown.")
+  while(True):
+    way = input("Which way would you like to go?\n [1] turn left and enter a cave\n [2] look behind yourself\n [0] quit the game")
+    if(way == "1"):
+      combat()
+      print("Any other way you'd like to try?")
+      break
+    elif(way == "2"):
+      lookBehind()
+      print("Any other way you'd like to try?")
+      break
+    elif(way == "0"):
+      print("Goodbye!")
+      break
+    else:
+      print("\nNo other way exists!\n")
 
+main()
